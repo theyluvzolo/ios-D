@@ -1,0 +1,616 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LUNAAR-SALT/Exploit/main/Kavo-ui-mobile.lua"))()
+local Window = Library.CreateLib("IOSPLOIT - IN DEVELOPMENT", "DarkTheme")
+
+local IOSPLOIT = Instance.new("ScreenGui") 
+ local TextLabel = Instance.new("TextButton") 
+ local UIGradient = Instance.new("UIGradient") 
+ local UITextSizeConstraint = Instance.new("UITextSizeConstraint") 
+  
+ IOSPLOIT.Name = "IOSPLOIT" 
+ IOSPLOIT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui") 
+ IOSPLOIT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling 
+ IOSPLOIT.ResetOnSpawn = false 
+  
+ TextLabel.Parent = IOSPLOIT 
+ TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255) 
+ TextLabel.BackgroundTransparency = 1.000 
+ TextLabel.BorderSizePixel = 0 
+ TextLabel.Position = UDim2.new(-0.000772226602, 0, 0.0343558267, 0) 
+ TextLabel.Size = UDim2.new(0.170134634, 0, 0.0700389072, 0) 
+ TextLabel.Font = Enum.Font.GothamBold 
+ TextLabel.Text = "IOSPLOIT" 
+ TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255) 
+ TextLabel.TextScaled = true 
+ TextLabel.TextSize = 28.000 
+ TextLabel.TextWrapped = true 
+ TextLabel.TextXAlignment = Enum.TextXAlignment.Left 
+ TextLabel.MouseButton1Down:Connect(function() 
+         Library:ToggleUI()
+ end) 
+
+--tabs
+local Credits = Window:NewTab("CREDITS")
+local A = Credits:NewSection("CREDITS - DEVELOPER, SCRIPT DEV")
+local b = Credits:NewSection(".gg/iosexploit")
+local c = Credits:NewSection("HEAD DEV: theyluvzolo.")
+local d = Credits:NewSection("CO DEV: Chxrgr")
+local e = Credits:NewSection("CREDITS TO ALL SCRIPT I USE!")
+
+local UsefullScript = Window:NewTab("UsefullScript")
+local A2Section = UsefullScript:NewSection("keyboard, shiftlock, etc")
+local aimlock = Window:NewTab("da hood script")
+local A3Section = aimlock:NewSection("da hood aimlocks and scripts")
+
+local Arsenal = Window:NewTab("Arsenal")
+local A4Section = Arsenal:NewSection("Aimbot, esp, guis")
+
+local OTHER = Window:NewTab("Other script")
+local A5Section = OTHER:NewSection("OTHER SCRIPTS")
+
+--local scripts A2
+
+A2Section:NewButton("Shiftlock", "shiftlock like a deskstop player", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()
+end)
+
+A2Section:NewButton("Keyboard", "keyboard like deskstops", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+A2Section:NewButton("FPS BOOSTER", "BOOST YOUR FPS", function()
+  _G.Settings = {
+    Players = {
+        ["Ignore Me"] = true, -- Ignore your Character
+        ["Ignore Others"] = true -- Ignore other Characters
+    },
+    Meshes = {
+        Destroy = false, -- Destroy Meshes
+        LowDetail = false -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+    },
+    Images = {
+        Invisible = true, -- Invisible Images
+        LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
+        Destroy = false, -- Destroy Images
+    },
+    Other = {
+        ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+        ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+        ["No Explosions"] = true, -- Makes Explosion's invisible
+        ["No Clothes"] = true, -- Removes Clothing from the game
+        ["Low Water Graphics"] = true, -- Removes Water Quality
+        ["No Shadows"] = false, -- Remove Shadows
+        ["Low Rendering"] = true, -- Lower Rendering
+        ["Low Quality Parts"] = true -- Lower quality parts
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+end)
+
+A2Section:NewSlider("JumpPower", "changes how high you jump", 32, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+A2Section:NewSlider("Gravity", "changes your gravity", 35, 0, function(s)
+    game.Workspace.Gravity = s
+end)
+
+A2Section:NewSlider("Speed", "Adjust playerspeed", 27, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+A2Section:NewToggle("InfJump", "Prevent's you having no jump limit", function(callback)
+    if callback then
+        local infjump = true
+IJ = game:GetService("UserInputService").JumpRequest:connect(function()
+    if infjump then
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+    end
+end)
+    else
+        IJ:disconnect()
+    end
+end)
+
+
+A2Section:NewToggle("Fov", "Changes Fov", function(state) 
+if state then 
+game.Workspace.CurrentCamera.FieldOfView = 120 
+else
+game.Workspace.CurrentCamera.FieldOfView = 80           
+end 
+end)
+
+A2Section:NewButton("FixCam", "fix camera bug on mobile", function()
+	cam.CameraType = Enum.CameraType.Fixed
+	cam.CameraType = Enum.CameraType.Custom
+end)
+
+--da hood aim locks!
+A3Section:NewLabel("DA HOOD GUIS")
+
+A3Section:NewButton("swagmode", "!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+end)
+
+A3Section:NewButton("nuker mode", "!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Allvideo/test/main/Whitelist.txt"))()
+end)
+
+
+A3Section:NewButton("pluto", "!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Scrvpter/Pluto/Lua/Loader.Lua', true))();
+end)
+
+
+A3Section:NewButton("nyula", "!", function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/nyulachan/nyula/main/nyuladhm"))()
+end)
+
+A3Section:NewLabel("SCRIPTS!")
+
+
+
+A3Section:NewButton("fakemacro", "figure it out", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/backupspeedtool/main/backupspeedtool", true))()
+end)
+
+A3Section:NewButton("resolver", "ButtonInfo", function()
+    local RunService = game:GetService("RunService")
+
+local function zeroOutYVelocity(hrp)
+    hrp.Velocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z)
+    hrp.AssemblyLinearVelocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z)
+end
+
+local function onPlayerAdded(player)
+    player.CharacterAdded:Connect(function(character)
+        local hrp = character:WaitForChild("HumanoidRootPart")
+        zeroOutYVelocity(hrp)
+    end)
+end
+
+local function onPlayerRemoving(player)
+    player.CharacterAdded:Disconnect()
+end
+
+game.Players.PlayerAdded:Connect(onPlayerAdded)
+game.Players.PlayerRemoving:Connect(onPlayerRemoving)
+
+RunService.Heartbeat:Connect(function()
+    pcall(function()
+        for i, player in pairs(game.Players:GetChildren()) do
+            if player.Name ~= game.Players.LocalPlayer.Name then
+                local hrp = player.Character.HumanoidRootPart
+                zeroOutYVelocity(hrp)
+            end
+        end
+    end)
+end)
+end)
+
+--A4 scripts
+
+A4Section:NewLabel("AIMBOT - by luna_salt")
+
+A4Section:NewButton("AIMBOT NO CIRCLE", "ButtonInfo", function()
+    local fov = 100
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local Cam = game.Workspace.CurrentCamera
+
+local FOVring = Drawing.new("Circle")
+FOVring.Visible = false
+FOVring.Thickness = 2
+FOVring.Color = Color3.fromRGB(128, 0, 128) -- Purple color
+FOVring.Filled = false
+FOVring.Radius = fov
+FOVring.Position = Cam.ViewportSize / 2
+
+local function updateDrawings()
+    local camViewportSize = Cam.ViewportSize
+    FOVring.Position = camViewportSize / 2
+end
+
+local function onKeyDown(input)
+    if input.KeyCode == Enum.KeyCode.Delete then
+        RunService:UnbindFromRenderStep("FOVUpdate")
+        FOVring:Remove()
+    end
+end
+
+UserInputService.InputBegan:Connect(onKeyDown)
+
+local function lookAt(target)
+    local lookVector = (target - Cam.CFrame.Position).unit
+    local newCFrame = CFrame.new(Cam.CFrame.Position, Cam.CFrame.Position + lookVector)
+    Cam.CFrame = newCFrame
+end
+
+local function getClosestPlayerInFOV(trg_part)
+    local nearest = nil
+    local last = math.huge
+    local playerMousePos = Cam.ViewportSize / 2
+    local localPlayerTeam = Players.LocalPlayer.Team
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= Players.LocalPlayer and player.Team ~= localPlayerTeam then
+            local part = player.Character and player.Character:FindFirstChild(trg_part)
+            if part then
+                local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
+                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+
+                if distance < last and isVisible and distance < fov then
+                    last = distance
+                    nearest = player
+                end
+            end
+        end
+    end
+
+    return nearest
+end
+
+RunService.RenderStepped:Connect(function()
+    updateDrawings()
+    local closest = getClosestPlayerInFOV("Head")
+    if closest and closest.Character:FindFirstChild("Head") then
+        lookAt(closest.Character.Head.Position)
+    end
+end)
+end)
+
+A4Section:NewButton("AIMBOT with circle", "ButtonInfo", function()
+    local fov = 100
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local Cam = game.Workspace.CurrentCamera
+
+local FOVring = Drawing.new("Circle")
+FOVring.Visible = true
+FOVring.Thickness = 2
+FOVring.Color = Color3.fromRGB(128, 0, 128) -- Purple color
+FOVring.Filled = false
+FOVring.Radius = fov
+FOVring.Position = Cam.ViewportSize / 2
+
+local function updateDrawings()
+    local camViewportSize = Cam.ViewportSize
+    FOVring.Position = camViewportSize / 2
+end
+
+local function onKeyDown(input)
+    if input.KeyCode == Enum.KeyCode.Delete then
+        RunService:UnbindFromRenderStep("FOVUpdate")
+        FOVring:Remove()
+    end
+end
+
+UserInputService.InputBegan:Connect(onKeyDown)
+
+local function lookAt(target)
+    local lookVector = (target - Cam.CFrame.Position).unit
+    local newCFrame = CFrame.new(Cam.CFrame.Position, Cam.CFrame.Position + lookVector)
+    Cam.CFrame = newCFrame
+end
+
+local function getClosestPlayerInFOV(trg_part)
+    local nearest = nil
+    local last = math.huge
+    local playerMousePos = Cam.ViewportSize / 2
+    local localPlayerTeam = Players.LocalPlayer.Team
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= Players.LocalPlayer and player.Team ~= localPlayerTeam then
+            local part = player.Character and player.Character:FindFirstChild(trg_part)
+            if part then
+                local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
+                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+
+                if distance < last and isVisible and distance < fov then
+                    last = distance
+                    nearest = player
+                end
+            end
+        end
+    end
+
+    return nearest
+end
+
+RunService.RenderStepped:Connect(function()
+    updateDrawings()
+    local closest = getClosestPlayerInFOV("Head")
+    if closest and closest.Character:FindFirstChild("Head") then
+        lookAt(closest.Character.Head.Position)
+    end
+end)
+end)
+A4Section:NewLabel("ESP")
+A4Section:NewButton("ESP", "ButtonInfo", function()
+    _G.FriendColor = Color3.fromRGB(0, 0, 255)
+_G.EnemyColor = Color3.fromRGB(255, 0, 0)
+_G.UseTeamColor = true
+
+local Holder = Instance.new("Folder", game.CoreGui)
+Holder.Name = "ESP"
+
+local Box = Instance.new("BoxHandleAdornment")
+Box.Name = "nilBox"
+Box.Size = Vector3.new(1, 2, 1)
+Box.Color3 = Color3.new(100 / 255, 100 / 255, 100 / 255)
+Box.Transparency = 0.7
+Box.ZIndex = 0
+Box.AlwaysOnTop = false
+Box.Visible = false
+
+local NameTag = Instance.new("BillboardGui")
+NameTag.Name = "nilNameTag"
+NameTag.Enabled = false
+NameTag.Size = UDim2.new(0, 200, 0, 50)
+NameTag.AlwaysOnTop = true
+NameTag.StudsOffset = Vector3.new(0, 1.8, 0)
+local Tag = Instance.new("TextLabel", NameTag)
+Tag.Name = "Tag"
+Tag.BackgroundTransparency = 1
+Tag.Position = UDim2.new(0, -50, 0, 0)
+Tag.Size = UDim2.new(0, 300, 0, 20)
+Tag.TextSize = 15
+Tag.TextColor3 = Color3.new(100 / 255, 100 / 255, 100 / 255)
+Tag.TextStrokeColor3 = Color3.new(0 / 255, 0 / 255, 0 / 255)
+Tag.TextStrokeTransparency = 0.4
+Tag.Text = "nil"
+Tag.Font = Enum.Font.SourceSansBold
+Tag.TextScaled = false
+
+local LoadCharacter = function(v)
+	repeat wait() until v.Character ~= nil
+	v.Character:WaitForChild("Humanoid")
+	local vHolder = Holder:FindFirstChild(v.Name)
+	vHolder:ClearAllChildren()
+	local b = Box:Clone()
+	b.Name = v.Name .. "Box"
+	b.Adornee = v.Character
+	b.Parent = vHolder
+	local t = NameTag:Clone()
+	t.Name = v.Name .. "NameTag"
+	t.Enabled = true
+	t.Parent = vHolder
+	t.Adornee = v.Character:WaitForChild("Head", 5)
+	if not t.Adornee then
+		return UnloadCharacter(v)
+	end
+	t.Tag.Text = v.Name
+	b.Color3 = Color3.new(v.TeamColor.r, v.TeamColor.g, v.TeamColor.b)
+	t.Tag.TextColor3 = Color3.new(v.TeamColor.r, v.TeamColor.g, v.TeamColor.b)
+	local Update
+	local UpdateNameTag = function()
+		if not pcall(function()
+			v.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+			local maxh = math.floor(v.Character.Humanoid.MaxHealth)
+			local h = math.floor(v.Character.Humanoid.Health)
+		end) then
+			Update:Disconnect()
+		end
+	end
+	UpdateNameTag()
+	Update = v.Character.Humanoid.Changed:Connect(UpdateNameTag)
+end
+
+local UnloadCharacter = function(v)
+	local vHolder = Holder:FindFirstChild(v.Name)
+	if vHolder and (vHolder:FindFirstChild(v.Name .. "Box") ~= nil or vHolder:FindFirstChild(v.Name .. "NameTag") ~= nil) then
+		vHolder:ClearAllChildren()
+	end
+end
+
+local LoadPlayer = function(v)
+	local vHolder = Instance.new("Folder", Holder)
+	vHolder.Name = v.Name
+	v.CharacterAdded:Connect(function()
+		pcall(LoadCharacter, v)
+	end)
+	v.CharacterRemoving:Connect(function()
+		pcall(UnloadCharacter, v)
+	end)
+	v.Changed:Connect(function(prop)
+		if prop == "TeamColor" then
+			UnloadCharacter(v)
+			wait()
+			LoadCharacter(v)
+		end
+	end)
+	LoadCharacter(v)
+end
+
+local UnloadPlayer = function(v)
+	UnloadCharacter(v)
+	local vHolder = Holder:FindFirstChild(v.Name)
+	if vHolder then
+		vHolder:Destroy()
+	end
+end
+
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+	spawn(function() pcall(LoadPlayer, v) end)
+end
+
+game:GetService("Players").PlayerAdded:Connect(function(v)
+	pcall(LoadPlayer, v)
+end)
+
+game:GetService("Players").PlayerRemoving:Connect(function(v)
+	pcall(UnloadPlayer, v)
+end)
+
+game:GetService("Players").LocalPlayer.NameDisplayDistance = 0
+
+if _G.Reantheajfdfjdgs then
+    return
+end
+
+_G.Reantheajfdfjdgs = ":suifayhgvsdghfsfkajewfrhk321rk213kjrgkhj432rj34f67df"
+
+local players = game:GetService("Players")
+local plr = players.LocalPlayer
+
+function esp(target, color)
+    if target.Character then
+        if not target.Character:FindFirstChild("GetReal") then
+            local highlight = Instance.new("Highlight")
+            highlight.RobloxLocked = true
+            highlight.Name = "GetReal"
+            highlight.Adornee = target.Character
+            highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+            highlight.FillColor = color
+            highlight.Parent = target.Character
+        else
+            target.Character.GetReal.FillColor = color
+        end
+    end
+end
+
+while task.wait() do
+    for i, v in pairs(players:GetPlayers()) do
+        if v ~= plr then
+            esp(v, _G.UseTeamColor and v.TeamColor.Color or ((plr.TeamColor == v.TeamColor) and _G.FriendColor or _G.EnemyColor))
+        end
+    end
+end
+end)
+
+A4Section:NewButton("Tracers", "ButtonInfo", function()
+    local TargetPartName = "HumanoidRootPart"
+local GenericHumanoidTargetPartName = TargetPartName	
+local LineColor = Color3.new(255, 255, 255)
+local TeammateLineColor = Color3.new(0, 0.25, 1)
+local GenericHumanoidLineColor = Color3.new(1, 0, 0)
+local LineWidth = 2
+local DrawTeammates = true
+local FindHumanoids = true
+local GetLineOrigin = function(Camera)
+	return Vector2.new(Camera.ViewportSize.X/2, Camera.ViewportSize.Y*.9)
+end
+
+
+
+
+local Camera = workspace.CurrentCamera
+local LineOrigin = nil
+Camera:GetPropertyChangedSignal("ViewportSize"):Connect(function()
+	LineOrigin = GetLineOrigin(Camera)
+end)
+LineOrigin = GetLineOrigin(Camera)
+
+
+local Gui = Instance.new("ScreenGui")
+Gui.Name = "SnaplineGui"
+Gui.Parent = game.Players.LocalPlayer.PlayerGui
+local Lines = {}
+
+
+function Setline(Line, Width, Color, Origin, Destination)
+	local Position = (Origin + Destination) / 2
+	Line.Position = UDim2.new(0, Position.X, 0, Position.Y)
+	local Length = (Origin - Destination).Magnitude
+	Line.BackgroundColor3 = Color
+	Line.BorderColor3 = Color
+	Line.Size = UDim2.new(0, Length, 0, Width)
+	Line.Rotation = math.deg(math.atan2(Destination.Y - Origin.Y, Destination.X - Origin.X))
+end
+
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	local Targets = {}
+	for i, Player in pairs(game.Players:GetPlayers()) do
+		if Player == game.Players.LocalPlayer then continue end
+		local IsTeammate = game.Players.LocalPlayer.Team ~= nil and Player.Team == game.Players.LocalPlayer.Team
+		if not DrawTeammates and IsTeammate then continue end
+		local Character = Player.Character
+		if not Character then continue end
+		local TargetPart = Character:FindFirstChild(TargetPartName)
+		if not TargetPart then continue end
+		local ScreenPoint, OnScreen = Camera:WorldToScreenPoint(TargetPart.Position)
+		if OnScreen then
+			table.insert(Targets, {Vector2.new(ScreenPoint.X, ScreenPoint.Y), IsTeammate and TeammateLineColor or LineColor})
+		end
+	end
+	if FindHumanoids then
+		for _, Obj in pairs(workspace:GetDescendants()) do
+			if Obj.ClassName ~= "Humanoid" then continue end
+			if game.Players:FindFirstChild(Obj.Parent.Name) then continue end
+			local TargetPart = Obj.Parent:FindFirstChild(TargetPartName)
+			if not TargetPart then continue end
+			local ScreenPoint, OnScreen = Camera:WorldToScreenPoint(TargetPart.Position)
+			if OnScreen then
+				table.insert(Targets, {Vector2.new(ScreenPoint.X, ScreenPoint.Y), GenericHumanoidLineColor})
+			end
+		end
+	end
+	if #Targets > #Lines then
+		local NewLine = Instance.new("Frame")
+		NewLine.Name = "Snapline"
+		NewLine.AnchorPoint = Vector2.new(.5, .5)
+		NewLine.Parent = Gui
+		table.insert(Lines, NewLine)
+	end
+	for i, Line in pairs(Lines) do
+		local TargetData = Targets[i]
+		if not TargetData then
+			Line:Destroy()
+			table.remove(Lines, i)
+			continue
+		end
+		Setline(Line, LineWidth, TargetData[2], LineOrigin, TargetData[1])
+	end
+end)
+end)
+
+--A5 SCRIPT
+
+A5Section:NewButton("brookhaven", "troll", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+end)
+
+A5Section:NewButton("build a boat", "ButtonInfo", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/BABFTPLAYERHUB/main/MainBABFTHub.lua'),true))()
+end)
+
+A5Section:NewButton("breaking point", "OP", function()
+getgenv().AutoFarm = true --enables / disables AutoFarm
+getgenv().ServerHop = false --enables / disables server hop, add to autoexec if you enable this.
+loadstring(game:HttpGet('https://raw.githubusercontent.com/2vsh/breakingpoint/main/mainscript.lua'))()
+end)
+
+A5Section:NewButton("Project slayer", "OP", function()
+    local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/Mobile.lua"
+repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet(LoaderUrl))()
+end)
+
+A5Section:NewButton("ShadowBoxing", "OP", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/shadow"))()
+end)
+
+A5Section:NewButton("FOOTBALL FUSION", "coming soon", function()
+    local players = game:GetService("Players")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "ERRRRR!";
+    Text = "SOMETHINGS RWONG SORRY ABOUT THAT., " .. players.LocalPlayer.DisplayName;
+    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
+    Duration = 5
+})
+end)
+
+--A5Section:NewButton("ButtonText", "ButtonInfo", function()
+    --print("Clicked")
+--end)
+
+A5Section:NewButton("FruitBattleGround", "OP", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/4ZMiLECr", true))()
+end)
+
+A5Section:NewButton("blade ball", "OP", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/nqxlOfc/Loaders/main/Blade_Ball.lua'))()
+end)
